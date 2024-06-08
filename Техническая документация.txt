@@ -1,1 +1,7 @@
-Это мой аркадный 2D файтинг В мое проекте реализованны такие классы как AttackComponent котрый связан с PlayerAttackHero1 и PlayerAttackHero3 отвечающие за сражение между игроками ,HealthComponent и HealBarComponent отвечающие за здоровье и его отображения, PlayerController и GlobalStringVar отвечают за управление игроками , AudioController и AudioSouce отвечают за звук в игре, PauseMenu этот скрипт представляет собой кнопки в меню, DeadZone если игрок вылетит за край карты то он побигабет
+Это мой аркадный 2D файтинг В мое проекте реализованны такие классы как:
+AttackComponent котрый связан с PlayerAttackHero1 и PlayerAttackHero3 отвечающие за сражение между игроками
+HealthComponent и HealBarComponent отвечающие за здоровье и его отображения
+PlayerController и GlobalStringVar отвечают за управление игроками
+AudioController и AudioSouce отвечают за звук в игре
+PauseMenu этот скрипт представляет собой кнопки в меню
+DeadZone если игрок вылетит за край карты то он побигабет
