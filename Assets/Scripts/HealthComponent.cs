@@ -8,7 +8,7 @@ public class HealthComponent : MonoBehaviour
     [SerializeField] private float _startingHealthHero1;
     [SerializeField] private float _startingHealthHero3;
 
-    public GameObject _win;
+    public GameObject _win; //панель победы
 
     public float _currentHealthHero3 { get; private set; }
     public float _currentHealthHero1 { get; private set; }
