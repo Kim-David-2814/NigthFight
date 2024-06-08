@@ -4,15 +4,15 @@ using UnityEngine;
 
 public abstract class AttackComponent : MonoBehaviour
 {
-    [SerializeField] protected float attackRange;
-    [SerializeField] protected float attackRate = 2f;
-    [SerializeField] protected int attackDamage;
-    [SerializeField] protected LayerMask enemyLayer;
-    [SerializeField] protected Transform attackPoint;
+    [SerializeField] protected float attackRange;     //радиус атаки
+    [SerializeField] protected float attackRate = 2f; //кулдаун атаки
+    [SerializeField] protected int attackDamage;      //урон
+    [SerializeField] protected LayerMask enemyLayer;  //слой врага
+    [SerializeField] protected Transform attackPoint; //точк радиуса атаки
 
-    protected float nextAttackCooldown = 0f;
+    protected float nextAttackCooldown = 0f; // время для следущей атаки
 
-    protected Animator anim;
+    protected Animator anim; 
 
     public virtual void Start()
     {

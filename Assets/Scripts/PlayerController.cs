@@ -6,20 +6,20 @@ namespace NightFight.input
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float _speed;
-        [SerializeField] private float _jumpForse;
-        [SerializeField] private float _groundCheckRadius;
+        [SerializeField] private float _speed; // скорость
+        [SerializeField] private float _jumpForse; // сила прыжка
+        [SerializeField] private float _groundCheckRadius; // радиус колойдера для прповерки земли
 
-        private float _moveX;
+        private float _moveX; // движение по иксу
 
         private Animator _anim;
         private Rigidbody2D _rb;
-        public LayerMask _ground;
-        public Transform _groundCheck;
+        public LayerMask _ground; //слой земли
+        public Transform _groundCheck; //проверка земли
 
-        public bool _onGround;
-        public bool _useWASD;
-        public bool _faceRight = true;
+        public bool _onGround; // на земле ли персонаж
+        public bool _useWASD; // какой котроллер использует игрок
+        public bool _faceRight = true; // в какую сторону смотрит персонаж
 
         public void Awake()
         {
@@ -34,6 +34,7 @@ namespace NightFight.input
             Jump();
         }
 
+        //метод ля ходьбы
         public void Walk()
         {
             if (_useWASD)
@@ -51,7 +52,8 @@ namespace NightFight.input
                 _anim.SetFloat("MoveHero3", Mathf.Abs(_moveX));
             }
         }
-
+        
+        // проверка земли и прыжок
         public void Jump()
         {
             CheckGrounded();
@@ -74,11 +76,13 @@ namespace NightFight.input
             }
         }
 
+        // проверка земли 
         void CheckGrounded()
         {
             _onGround = Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _ground);
         }
 
+        // поворт персонажа по иксу
         public void Reflec()
         {
             if ((_moveX > 0 && !_faceRight) || (_moveX < 0 && _faceRight))
@@ -88,6 +92,7 @@ namespace NightFight.input
             }
         }
 
+        // чтобы легче видететь где рассположен радиус колайдера косающегося земли
         void OnDrawGizmos()
         {
             if (_groundCheck != null)

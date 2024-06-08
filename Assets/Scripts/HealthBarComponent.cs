@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class HealthBarComponent : MonoBehaviour
 {
-    [SerializeField] private HealthComponent _playerHealthHero1;
-    [SerializeField] private HealthComponent _playerHealthHero3;
-    [SerializeField] private Image _totalHealtBarHero1;
-    [SerializeField] private Image _currentHealthBarHero1;
-    [SerializeField] private Image _totalHealtBarHero3;
-    [SerializeField] private Image _currentHealthBarHero3;
+    [SerializeField] private HealthComponent _playerHealthHero1; //жизни игрока 1
+    [SerializeField] private HealthComponent _playerHealthHero3; //жизни игрока 2
+    [SerializeField] private Image _totalHealtBarHero1; //полные жизни игрока 1
+    [SerializeField] private Image _currentHealthBarHero1;//жизни на данный момент игрока 2
+    [SerializeField] private Image _totalHealtBarHero3;//полные жизни игрока 2
+    [SerializeField] private Image _currentHealthBarHero3;//жизни на данный момент игрока 2
 
     private void Start()
     {

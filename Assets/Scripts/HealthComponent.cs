@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    [SerializeField] private float _startingHealthHero1;
-    [SerializeField] private float _startingHealthHero3;
+    [SerializeField] private float _startingHealthHero1; // стартовые жизни игрока 1
+    [SerializeField] private float _startingHealthHero3; // стартовые жизни игрока 2 
 
-    public GameObject _win;
+    public GameObject _win; //панель победы
 
     public float _currentHealthHero3 { get; private set; }
     public float _currentHealthHero1 { get; private set; }
 
     private Animator _anim;
-    private bool _isDeadHero1;
-    private bool _isDeadHero3;
+    private bool _isDeadHero1; // мерт герой или нет
+    private bool _isDeadHero3; 
 
 
     private void Awake()
@@ -25,17 +25,7 @@ public class HealthComponent : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamageHero1(1);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamageHero3(1);
-        }
-    }
+    // получение урона игроком 
     public void TakeDamageHero1(float damage)
     {
         _currentHealthHero1 = Mathf.Clamp(_currentHealthHero1 - damage, 0, _startingHealthHero1);

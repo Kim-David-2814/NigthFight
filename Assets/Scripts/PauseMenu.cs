@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
+    // пауза , выход из игры , и загрузка другой сцены
     public void Pause()
     {
         Time.timeScale = 0f;

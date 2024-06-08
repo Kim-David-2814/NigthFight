@@ -14,6 +14,7 @@ public class PlayerAttackHero1 : AttackComponent
         base.Update();
     }
 
+    //расчет кулдауна и анимация атаки
     protected override void InputAttack()
     {
         if (Time.time >= nextAttackCooldown)
@@ -26,6 +27,7 @@ public class PlayerAttackHero1 : AttackComponent
         }
     }
 
+    // проверка врага и нанесение урона
     protected override void Attack()
     {
         anim.SetTrigger("AttackHero1");
@@ -43,6 +45,7 @@ public class PlayerAttackHero1 : AttackComponent
         }
     }
 
+    // чтобы легче видететь где рассположен радиус атаки
     public void OnDrawGizmos()
     {
         if (attackPoint != null)

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioSource _musicSFX;
-    public AudioSource _soundSFX;
+    public AudioSource _musicSFX; //музыка
+    public AudioSource _soundSFX; //звук
 
-    public Sprite _musicOff;
+    public Sprite _musicOff; 
     public Sprite _musicOn;
     public Sprite _soundOff;
     public Sprite _soundOn;

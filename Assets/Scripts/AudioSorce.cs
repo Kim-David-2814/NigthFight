@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AudioSorce : MonoBehaviour
 {
-    private AudioSource _audio;
-    public AudioClip _click;
+    private AudioSource _audio; //звук
+    public AudioClip _click; //звук при клике
 
     private void Start()
     {
