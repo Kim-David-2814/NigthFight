@@ -1,4 +1,3 @@
 # NigthFight
-My name is Kim David, this is my 2D arcade fighting game.
-Меня зовут Ким Давид Владимирович , Это мой аркадный 2D файтинг
+Arcade 2D fighting game with unique characters and exciting battles. Use skills, speed and tactics to win dynamic battles!
 
